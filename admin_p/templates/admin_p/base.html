@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'category/css/normilize.css'%}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'bootstrap/js/bootstrap.min.js'%}">
+    <link rel="stylesheet" href="{% static 'admin_p/css/panel.css'%}">
+    {% block css%}{% endblock%}
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    {% block body %}{% endblock%}
+
+
+</body>
+</html>
