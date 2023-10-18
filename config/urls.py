@@ -18,7 +18,7 @@ urlpatterns = [
     path('auth/', include('user_auth.urls')),
     path('api-my_auth/', include('rest_framework.urls')),
     path('api/v1/', include(router.urls)),
-    path('category/', include('category.urls')),
+    path('', include('category.urls')),
     path('panel/', include('admin_p.urls'))
 
 ]
