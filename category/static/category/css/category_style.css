@@ -1,6 +1,6 @@
 
 .main{
-    background: url("/category/static/category/images/kulinarnuyu.jpg");
+    background: url("/static/category/images/kulinarnuyu.jpg");
     background-size: cover; /* Растягивает изображение на весь экран и сохраняет пропорции */
     background-position: center center; /* Выравнивание изображения по центру */
     background-repeat: no-repeat;
@@ -8,7 +8,7 @@
 }
 
 .main_menu{
-    background: url("/category/static/category/images/kukhnyu.jpg");
+    background: url("/static/category/images/kukhnyu.jpg");
     background-size: cover; /* Растягивает изображение на весь экран и сохраняет пропорции */
     background-position: center center; /* Выравнивание изображения по центру */
     background-repeat: no-repeat;
