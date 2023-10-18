@@ -15,6 +15,7 @@ class ProductViewSet(ModelViewSet):
     filterset_fields = ['title', 'category']
     search_fields = ['title', 'price']
     ordering_fields = ['title']
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
     def get_serializer_class(self):
         if self.request.method == 'POST':

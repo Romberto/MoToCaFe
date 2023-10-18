@@ -23,13 +23,17 @@ class TestProductSerializer(TestCase):
 
     def test_api_product_serialiser(self):
         data = ProductSerializers([self.product_1, self.product_2, self.product_3], many=True).data
-        expected_data = [OrderedDict(
-            [('id', 1), ('title', 'title_product_1'), ('price', '1000.00'), ('photo_url', 'https://test.png'),
-             ('description', 'description_product_text'), ('category', 3), ('category_title', 'title_1')]), OrderedDict(
-            [('id', 2), ('title', 'title_product_2'), ('price', '2000.00'), ('photo_url', 'https://test.png'),
-             ('description', 'description_product_text'), ('category', 3), ('category_title', 'title_1')]), OrderedDict(
-            [('id', 3), ('title', 'title_product_3'), ('price', '1500.00'), ('photo_url', 'https://test.png'),
-             ('description', 'description_product_text'), ('category', 4), ('category_title', 'title_2')])]
+        expected_data = [
+            OrderedDict(
+                [('id', self.product_1.id), ('title', 'title_product_1'), ('price', '1000.00'), ('photo_url', 'https://test.png'),
+                 ('description', 'description_product_text'), ('category', self.category_1.id), ('category_title', 'title_1')]),
+            OrderedDict(
+                [('id', self.product_2.id), ('title', 'title_product_2'), ('price', '2000.00'), ('photo_url', 'https://test.png'),
+                 ('description', 'description_product_text'), ('category', self.category_1.id), ('category_title', 'title_1')]),
+            OrderedDict(
+                [('id', self.product_3.id), ('title', 'title_product_3'), ('price', '1500.00'), ('photo_url', 'https://test.png'),
+                 ('description', 'description_product_text'), ('category', self.category_2.id), ('category_title', 'title_2')])
+        ]
 
         self.assertEquals(expected_data, data)
 
